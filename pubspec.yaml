@@ -1,6 +1,6 @@
 name: vmiso
 description: VMISO State Management (View Model, Inherited Store, Observer)
-version: 0.0.2
+version: 0.0.3
 author: Ryan Knell <rknell@snappyapps.com.au>
 homepage: https://www.snappyapps.com.au
 

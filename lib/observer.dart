@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'view_model.dart';
 
 class Observer extends StatelessWidget {
-  final Widget Function() builder;
+  final Widget Function(BuildContext, AsyncSnapshot<dynamic>) builder;
   final ViewModel viewModel;
 
   const Observer({Key key, @required this.builder, @required this.viewModel})
@@ -13,7 +13,7 @@ class Observer extends StatelessWidget {
     return StreamBuilder(
         stream: viewModel.stream,
         builder: (context, snapshot) {
-          return builder();
+          return builder(context, snapshot);
         });
   }
 }
