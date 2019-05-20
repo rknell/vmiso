@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'ViewModel.dart';
+import 'view_model.dart';
 
 class Observer extends StatelessWidget {
   final Widget Function() builder;

@@ -1,9 +1,9 @@
 library vmiso;
 
 import 'InheritedStore.dart';
-import 'Observer.dart';
-import 'ViewModel.dart';
+import 'observer.dart';
+import 'view_model.dart';
 
 export 'InheritedStore.dart';
-export 'Observer.dart';
-export 'ViewModel.dart';
+export 'observer.dart';
+export 'view_model.dart';
