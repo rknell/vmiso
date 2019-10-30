@@ -1,0 +1,38 @@
+class $NAME$ extends StatefulWidget {
+  final Widget child;
+
+  const $NAME$({Key key, @required this.child}) : super(key: key);
+
+  static _Inherited$NAME$ of(BuildContext context) {
+    return (context.inheritFromWidgetOfExactType(_Inherited$NAME$)
+    as _Inherited$NAME$);
+  }
+
+  @override
+  _$NAME$State createState() => _$NAME$State();
+}
+
+class _$NAME$State extends State<$NAME$> {
+
+  @override
+  Widget build(BuildContext context) {
+    return _Inherited$NAME$(
+      child: widget.child
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+}
+
+class _Inherited$NAME$ extends InheritedWidget {
+  const _Inherited$NAME$(
+      {Key key,
+        @required Widget child})
+      : super(child: child);
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) => false;
+}

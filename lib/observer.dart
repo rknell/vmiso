@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'view_model.dart';
 
 class Observer extends StatelessWidget {
-  final Widget Function(BuildContext, AsyncSnapshot<dynamic>) builder;
+  final Widget Function(BuildContext context, AsyncSnapshot<dynamic> snapshot)
+      builder;
   final ViewModel viewModel;
 
   const Observer({Key key, @required this.builder, @required this.viewModel})
