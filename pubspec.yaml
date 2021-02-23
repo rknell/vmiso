@@ -1,7 +1,6 @@
 name: vmiso
 description: VMISO State Management (View Model, Observer)
-version: 2.0.0
-author: Ryan Knell <rknell@snappyapps.com.au>
+version: 2.0.0-nullsafety.0
 homepage: https://www.snappyapps.com.au
 repository: https://github.com/rknell/vmiso
 
