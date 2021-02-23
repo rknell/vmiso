@@ -9,7 +9,12 @@
 
 import 'package:flutter/widgets.dart';
 
-import 'example.dart';
+class _AppStateState extends State<AppState> {
+  @override
+  Widget build(BuildContext context) {
+    return _InheritedAppState(child: widget.child, state: this);
+  }
+}
 
 ///
 /// This class is just boilerplate
@@ -22,9 +27,10 @@ class AppState extends StatefulWidget {
 
   const AppState({Key key, @required this.child}) : super(key: key);
 
-  static _InheritedAppState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_InheritedAppState)
-        as _InheritedAppState);
+  static _AppStateState of(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<_InheritedAppState>()
+        ?.state;
   }
 
   @override
@@ -39,37 +45,11 @@ class AppState extends StatefulWidget {
 /// This is setup using initState, because I often have another class that
 /// handles network configurations that I pass into the stores.
 ///
-class _AppStateState extends State<AppState> {
-  ExampleViewModel exampleViewModel;
-
-  @override
-  void initState() {
-    super.initState();
-    exampleViewModel = ExampleViewModel(); //Init the example view model.
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return _InheritedAppState(
-        child: widget.child,
-        exampleViewModel: exampleViewModel //Pass it to the inherited widget.
-        );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    exampleViewModel.dispose();
-  }
-}
-
 class _InheritedAppState extends InheritedWidget {
-  final ExampleViewModel exampleViewModel; //Set it as a final here
+  final _AppStateState state;
 
   const _InheritedAppState(
-      {Key key,
-        @required this.exampleViewModel, // Pass it in like any other widget.
-        @required Widget child})
+      {Key key, @required this.state, @required Widget child})
       : super(child: child);
 
   @override

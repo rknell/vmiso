@@ -1,4 +1,4 @@
 library vmiso;
 
-export 'observer.dart';
-export 'view_model.dart';
+export 'src/observer.dart';
+export 'src/view_model.dart';

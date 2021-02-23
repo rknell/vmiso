@@ -1,9 +1,9 @@
 import 'package:rxdart/rxdart.dart';
 
 class ViewModel {
-  BehaviorSubject _subject;
+  late BehaviorSubject _subject;
 
-  Observable get stream => _subject.stream;
+  Stream get stream => _subject.stream;
 
   notify() {
     _subject.add(this);

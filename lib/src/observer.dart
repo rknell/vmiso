@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+
 import 'view_model.dart';
 
 class Observer extends StatelessWidget {
@@ -6,7 +7,7 @@ class Observer extends StatelessWidget {
       builder;
   final ViewModel viewModel;
 
-  const Observer({Key key, @required this.builder, @required this.viewModel})
+  const Observer({Key? key, required this.builder, required this.viewModel})
       : super(key: key);
 
   @override

@@ -1,3 +1,7 @@
+## [2.0.0] - 2020-02-23
+
+Upgrading the package to null safety
+
 ## [1.0.0] - 2019-10-30
 
 * No pomp and ceremony - releasing as 1.0 as its been extremly stable for all internal use cases.
